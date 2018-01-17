@@ -1,4 +1,6 @@
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.text.DecimalFormat;
 
 /*
@@ -42,6 +44,7 @@ public class Radio implements douglas
                 if (a==1610) 
                 {
                     a=530;
+                    System.out.println("530");
                     return a;
                     
                 }
@@ -68,6 +71,10 @@ public class Radio implements douglas
                 else
                 {
                     a+=0.2;
+                    
+                    BigDecimal bd = new BigDecimal(a);
+                    bd = bd.setScale(2, RoundingMode.HALF_UP);
+                    a=(float) bd.doubleValue();
                 }
                 
                 

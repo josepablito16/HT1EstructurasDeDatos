@@ -10,11 +10,11 @@
  */
 public interface douglas 
 {
-    public void onOff(boolean e);
-    public void Switch(boolean e);
-    public float siguiente(float a);
-    public float anterior(float a);
-    public void guardar(float e, int b);
+    public boolean onOff();
+    public float Switch();
+    public float siguiente();
+    public float anterior();
+    public void guardar(int b);
     public float seleccionarFav(int b);
    
     

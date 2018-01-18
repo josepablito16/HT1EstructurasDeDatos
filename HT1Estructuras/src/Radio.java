@@ -15,95 +15,131 @@ import java.text.DecimalFormat;
  */
 public class Radio implements douglas
 {
+    private boolean encendido;
+    private String tipo;
+    private float estacionAM;
+    private float estacionFM;
+    private float[] listaAM;
+    private float[] listaFM;
+    private float maxfm;
+    private float minfm;
+    private float maxam;
+    private float minam;
+    
+    public Radio(){
+        tipo="fm";
+        maxfm=(float)(107.9);
+        minfm=(float)(89.7);
+        maxam=(float)(1610);
+        minam=(float)(530);
+        encendido=true;
+        estacionAM= 530;
+        estacionFM= (float)87.9;
+        listaAM=new float[12];
+        listaFM=new float[12];
+        for (int i=0;i<12;i++){
+            listaAM[i]=0;
+            listaFM[i]=0;
+        }
+        
+    }
  
     
     @Override
-    public void onOff(boolean e) 
+    public boolean onOff() 
     {
-       
+       if (encendido==true){
+           encendido=false;
+       }else{
+           encendido=true;
+       }
         //jose
+        return encendido;
         
     }
 
     @Override
-    public void Switch(boolean e) 
+    public float Switch() 
     {
-               
-        
-        //jose
-    }
-
-    @Override
-    public float siguiente(float a) 
-    {
-       
-        if (a%10==0) 
-        {
-            //es AM
-            
-                if (a==1610) 
-                {
-                    a=530;
-                    System.out.println("530");
-                    return a;
-                    
-                }
-                else
-                {
-                    a+=10;
-                }               
-                
-            
-            
-            
+        if (tipo.equals("am")){
+            tipo="fm";
+            return estacionFM;
+        }else{
+            tipo="am";
+            return estacionAM;
         }
-        else
-        {
-            //es FM
-            
-                if (a>107.9) 
-                {
-                    a=(float) 87.9;
-                    
-                    return (float) 87.9;
-                    
-                }
-                else
-                {
-                    a+=0.2;
-                    
-                    BigDecimal bd = new BigDecimal(a);
-                    bd = bd.setScale(2, RoundingMode.HALF_UP);
-                    a=(float) bd.doubleValue();
-                }
-                
-                
-            
-            
-            
+    }
+
+    @Override
+    public float siguiente() 
+    {
+        if (tipo.equals("am")){
+            if (estacionAM!=maxam){
+            estacionAM+=10;
+            return estacionAM;
+            }else{
+            estacionAM=530;
+            return estacionAM;
+            }
         }
-          
-        
-        
-        //jose
-        return a;
+        else{
+            if (estacionFM<maxfm){
+            estacionFM+=(float)(0.20)*1.0;
+            DecimalFormat numberFormat = new DecimalFormat("#.00");
+            estacionFM=Float.parseFloat(numberFormat.format(estacionFM));
+            return estacionFM;
+            }else{
+            estacionFM=(float)87.9;
+            
+            return estacionFM;
+            }
+        }
     }
 
     @Override
-    public float anterior(float a) 
+    public float anterior() 
     {
-        return 20;
+        if (tipo.equals("am")){
+            if (estacionAM!=minam){
+            estacionAM-=10;
+            return estacionAM;
+            }else{
+            estacionAM=1610;
+            return estacionAM;
+            }
+        }
+        else{
+            if (estacionFM>minfm){
+            estacionFM-=0.20*1.0;
+            DecimalFormat numberFormat = new DecimalFormat("#.00");
+            estacionFM=Float.parseFloat(numberFormat.format(estacionFM));
+            return estacionFM;
+            }else{
+            estacionFM=(float)107.9;
+            return estacionFM;
+            }
+        }
     }
 
     @Override
-    public void guardar(float e, int b) 
-    {
+    public void guardar (int b) {
+        if (tipo.equals("am")){
+            listaAM[b]=estacionAM;
+        }
+        else{
+            listaFM[b]=estacionFM;
+        }
     }
 
     @Override
     public float seleccionarFav(int b) 
     {
-        return 20;
+        if (tipo.equals("am")){
+            return listaAM[b];
+        }
+        else{
+            return listaFM[b];
+        }
     }
     
 }

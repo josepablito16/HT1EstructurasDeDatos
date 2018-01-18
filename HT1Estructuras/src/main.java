@@ -13,11 +13,10 @@ public class main extends javax.swing.JFrame {
     /**
      * Creates new form main
      */
-    douglas d = new Radio();
-    public static double am=530;
-    public static double fm;
+    private douglas d;
     
     public main() {
+        d = new Radio();
         initComponents();
     }
 
@@ -68,6 +67,11 @@ public class main extends javax.swing.JFrame {
 
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton4.setText("<");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton5.setText(">");
@@ -170,7 +174,6 @@ public class main extends javax.swing.JFrame {
                                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel2))))
                         .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton6)
                     .addComponent(jButton7)
@@ -238,15 +241,15 @@ public class main extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // Boton de prender y apagar
         
-        if (jPanel1.isVisible()) 
+        if (d.onOff()) 
         {
-            jButton1.setText("ENCENDER");
-            jPanel1.setVisible(false);
+            jButton1.setText("Apagar");
+            jPanel1.setVisible(true);
         }
         else
         {
-            jButton1.setText("APAGAR");
-            jPanel1.setVisible(true);
+            jButton1.setText("Encender");
+            jPanel1.setVisible(false);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -256,13 +259,13 @@ public class main extends javax.swing.JFrame {
         if (jButton2.getText().equals("AM")) 
         {
             jButton2.setText("FM");  
-            jLabel1.setText("530");
+            jLabel1.setText(Float.toString(d.Switch()));
             jLabel2.setText("AM");
         }
         else
         {
             jButton2.setText("AM"); 
-            jLabel1.setText("87.9");
+            jLabel1.setText(Float.toString(d.Switch()));
             jLabel2.setText("FM");
         }
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -270,9 +273,15 @@ public class main extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // boton de siguiente       
         
-        jLabel1.setText(Float.toString(d.siguiente(Float.parseFloat(jLabel1.getText()))));
+            jLabel1.setText(Float.toString(d.siguiente()));
         
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        
+            jLabel1.setText(Float.toString(d.anterior()));
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments

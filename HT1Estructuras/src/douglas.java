@@ -14,7 +14,7 @@ public interface douglas
      * Metodo para saber si el radio esta encendido o apagado
      * @return encendido regresa si esta encendido o apagado el radio 
      */
-    public boolean onOff();
+    public void onOff();
     
     /**
      * matodo que cambia de am a fm y de fm a am
@@ -45,10 +45,11 @@ public interface douglas
     
     /**
      * metodo para saber que estacion esta guardada en favoritos
+     * @param e En numero de estacion que se deasea guardan en la posicion
      * @param b posicion del boton en la que se desea saber que estacion esta guardada
      * @return lista[x] regresa la estacion que esta guardada en ese boton
      */
-    public float seleccionarFav(int b);
+    public float seleccionarFav(float e,int b);
    
     
 }

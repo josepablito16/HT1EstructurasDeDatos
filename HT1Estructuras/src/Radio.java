@@ -51,7 +51,7 @@ public class Radio implements douglas
      * Metodo para saber si el radio esta encendido o apagado
      * @return encendido regresa si esta encendido o apagado el radio 
      */
-    public boolean onOff() 
+    public void onOff() 
     {
         
        if (encendido==true){
@@ -60,8 +60,6 @@ public class Radio implements douglas
            encendido=true;
        }
         //jose
-        return encendido;
-        
     }
 
     @Override
@@ -159,16 +157,18 @@ public class Radio implements douglas
     @Override
     /**
      * metodo para saber que estacion esta guardada en favoritos
+     * @param e En numero de estacion que se deasea guardan en la posicion
      * @param b posicion del boton en la que se desea saber que estacion esta guardada
      * @return lista[x] regresa la estacion que esta guardada en ese boton
      */
-    public float seleccionarFav(int b) 
+    public float seleccionarFav(float e,int b) 
     {
         if (tipo.equals("am")){
             return listaAM[b];
         }
         else{
-            return listaFM[b];
+            DecimalFormat numberFormat = new DecimalFormat("#.00");
+            return Float.parseFloat(numberFormat.format(listaFM[b]));
         }
     }
     

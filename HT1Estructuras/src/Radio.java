@@ -2,16 +2,12 @@
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
  *
- * @author jose
+ * @author Luis Delgado
+ * @author Jose Cifuentes
+ * @version 18.01.2018
+ * 
  */
 public class Radio implements douglas
 {
@@ -26,6 +22,11 @@ public class Radio implements douglas
     private float maxam;
     private float minam;
     
+    
+    
+    /**
+     * Este es el constructor el cual inicializa las variables necesarias
+     */
     public Radio(){
         tipo="fm";
         maxfm=(float)(107.9);
@@ -46,8 +47,13 @@ public class Radio implements douglas
  
     
     @Override
+    /**
+     * Metodo para saber si el radio esta encendido o apagado
+     * @return encendido regresa si esta encendido o apagado el radio 
+     */
     public boolean onOff() 
     {
+        
        if (encendido==true){
            encendido=false;
        }else{
@@ -59,6 +65,11 @@ public class Radio implements douglas
     }
 
     @Override
+    /**
+     * matodo que cambia de am a fm y de fm a am
+     * @return estacionAM regresa la ultima estacion am
+     * @return estacionFM regresa la ultima estacion fm
+     */
     public float Switch() 
     {
         if (tipo.equals("am")){
@@ -71,6 +82,11 @@ public class Radio implements douglas
     }
 
     @Override
+    /**
+     * metodo que regresa la siguiente estacion dependiendo si es am o fm
+     * @return estacionAm regresa la estacion que corresponda
+     * @return estacionFm regresa la estacion que corresponda
+     */
     public float siguiente() 
     {
         if (tipo.equals("am")){
@@ -97,6 +113,11 @@ public class Radio implements douglas
     }
 
     @Override
+    /**
+     * metodo que regresa la estacion anterior dependiendo se es am o fm
+     * @return estacion Am regresa la estacion anterior
+     * @return estacion fm regresa la estacion anterior     
+     */
     public float anterior() 
     {
         if (tipo.equals("am")){
@@ -122,6 +143,10 @@ public class Radio implements douglas
     }
 
     @Override
+    /**
+     * metodo para guardar una estacion en favoritos
+     * @param b posicion del boton para ser guardado 
+     */
     public void guardar (int b) {
         if (tipo.equals("am")){
             listaAM[b]=estacionAM;
@@ -132,6 +157,11 @@ public class Radio implements douglas
     }
 
     @Override
+    /**
+     * metodo para saber que estacion esta guardada en favoritos
+     * @param b posicion del boton en la que se desea saber que estacion esta guardada
+     * @return lista[x] regresa la estacion que esta guardada en ese boton
+     */
     public float seleccionarFav(int b) 
     {
         if (tipo.equals("am")){

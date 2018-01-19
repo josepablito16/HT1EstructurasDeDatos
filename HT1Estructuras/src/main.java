@@ -369,9 +369,9 @@ public class main extends javax.swing.JFrame {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         if (cbConfig.isSelected()){
-            d.guardar(0);
+            d.guardar(Float.parseFloat(jLabel1.getText()),0);
         }else{
-            float estacion=d.seleccionarFav(Float.parseFloat(jLabel1.getText()),0);
+            float estacion=d.seleccionarFav(0);
             if(estacion!=0){
                 jLabel1.setText(Float.toString(estacion));
             }
@@ -381,9 +381,9 @@ public class main extends javax.swing.JFrame {
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
         if (cbConfig.isSelected()){
-            d.guardar(1);
+            d.guardar(Float.parseFloat(jLabel1.getText()),1);
         }else{
-            float estacion=d.seleccionarFav(Float.parseFloat(jLabel1.getText()),1);
+            float estacion=d.seleccionarFav(1);
             if(estacion!=0){
                 jLabel1.setText(Float.toString(estacion));
             }
@@ -393,9 +393,9 @@ public class main extends javax.swing.JFrame {
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
         if (cbConfig.isSelected()){
-            d.guardar(2);
+            d.guardar(Float.parseFloat(jLabel1.getText()),2);
         }else{
-            float estacion=d.seleccionarFav(Float.parseFloat(jLabel1.getText()),2);
+            float estacion=d.seleccionarFav(2);
             if(estacion!=0){
                 jLabel1.setText(Float.toString(estacion));
             }
@@ -405,9 +405,9 @@ public class main extends javax.swing.JFrame {
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
         if (cbConfig.isSelected()){
-            d.guardar(3);
+            d.guardar(Float.parseFloat(jLabel1.getText()),3);
         }else{
-            float estacion=d.seleccionarFav(Float.parseFloat(jLabel1.getText()),3);
+            float estacion=d.seleccionarFav(3);
             if(estacion!=0){
                 jLabel1.setText(Float.toString(estacion));
             }
@@ -417,9 +417,9 @@ public class main extends javax.swing.JFrame {
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         // TODO add your handling code here:
         if (cbConfig.isSelected()){
-            d.guardar(4);
+            d.guardar(Float.parseFloat(jLabel1.getText()),4);
         }else{
-            float estacion=d.seleccionarFav(Float.parseFloat(jLabel1.getText()),4);
+            float estacion=d.seleccionarFav(4);
             if(estacion!=0){
                 jLabel1.setText(Float.toString(estacion));
             }
@@ -429,9 +429,9 @@ public class main extends javax.swing.JFrame {
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         // TODO add your handling code here:
         if (cbConfig.isSelected()){
-            d.guardar(5);
+            d.guardar(Float.parseFloat(jLabel1.getText()),5);
         }else{
-            float estacion=d.seleccionarFav(Float.parseFloat(jLabel1.getText()),5);
+            float estacion=d.seleccionarFav(5);
             if(estacion!=0){
                 jLabel1.setText(Float.toString(estacion));
             }
@@ -441,9 +441,9 @@ public class main extends javax.swing.JFrame {
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         // TODO add your handling code here:
         if (cbConfig.isSelected()){
-            d.guardar(6);
+            d.guardar(Float.parseFloat(jLabel1.getText()),6);
         }else{
-            float estacion=d.seleccionarFav(Float.parseFloat(jLabel1.getText()),6);
+            float estacion=d.seleccionarFav(6);
             if(estacion!=0){
                 jLabel1.setText(Float.toString(estacion));
             }
@@ -453,9 +453,9 @@ public class main extends javax.swing.JFrame {
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
         // TODO add your handling code here:
         if (cbConfig.isSelected()){
-            d.guardar(7);
+            d.guardar(Float.parseFloat(jLabel1.getText()),7);
         }else{
-            float estacion=d.seleccionarFav(Float.parseFloat(jLabel1.getText()),7);
+            float estacion=d.seleccionarFav(7);
             if(estacion!=0){
                 jLabel1.setText(Float.toString(estacion));
             }
@@ -465,9 +465,9 @@ public class main extends javax.swing.JFrame {
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         // TODO add your handling code here:
         if (cbConfig.isSelected()){
-            d.guardar(8);
+            d.guardar(Float.parseFloat(jLabel1.getText()),8);
         }else{
-            float estacion=d.seleccionarFav(Float.parseFloat(jLabel1.getText()),8);
+            float estacion=d.seleccionarFav(8);
             if(estacion!=0){
                 jLabel1.setText(Float.toString(estacion));
             }
@@ -477,9 +477,9 @@ public class main extends javax.swing.JFrame {
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
         // TODO add your handling code here:
         if (cbConfig.isSelected()){
-            d.guardar(9);
+            d.guardar(Float.parseFloat(jLabel1.getText()),9);
         }else{
-            float estacion=d.seleccionarFav(Float.parseFloat(jLabel1.getText()),9);
+            float estacion=d.seleccionarFav(9);
             if(estacion!=0){
                 jLabel1.setText(Float.toString(estacion));
             }
@@ -489,9 +489,9 @@ public class main extends javax.swing.JFrame {
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
         // TODO add your handling code here:
         if (cbConfig.isSelected()){
-            d.guardar(10);
+            d.guardar(Float.parseFloat(jLabel1.getText()),10);
         }else{
-            float estacion=d.seleccionarFav(Float.parseFloat(jLabel1.getText()),10);
+            float estacion=d.seleccionarFav(10);
             if(estacion!=0){
                 jLabel1.setText(Float.toString(estacion));
             }
@@ -501,9 +501,9 @@ public class main extends javax.swing.JFrame {
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
         // TODO add your handling code here:
         if (cbConfig.isSelected()){
-            d.guardar(11);
+            d.guardar(Float.parseFloat(jLabel1.getText()),11);
         }else{
-            float estacion=d.seleccionarFav(Float.parseFloat(jLabel1.getText()),11);
+            float estacion=d.seleccionarFav(11);
             if(estacion!=0){
                 jLabel1.setText(Float.toString(estacion));
             }

@@ -39,17 +39,17 @@ public interface douglas
     
     /**
      * metodo para guardar una estacion en favoritos
+     * @param e En numero de estacion que se deasea guardan en la posicion
      * @param b posicion del boton para ser guardado 
      */
-    public void guardar(int b);
+    public void guardar(float e,int b);
     
     /**
      * metodo para saber que estacion esta guardada en favoritos
-     * @param e En numero de estacion que se deasea guardan en la posicion
      * @param b posicion del boton en la que se desea saber que estacion esta guardada
      * @return lista[x] regresa la estacion que esta guardada en ese boton
      */
-    public float seleccionarFav(float e,int b);
+    public float seleccionarFav(int b);
    
     
 }

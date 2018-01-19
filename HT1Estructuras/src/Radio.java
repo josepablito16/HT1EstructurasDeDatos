@@ -46,9 +46,9 @@ public class Radio implements iradio
  
     
     @Override
-    /**
-     * Metodo para saber si el radio esta encendido o apagado
-     * @return encendido regresa si esta encendido o apagado el radio 
+   /**
+     * Metodo para cabiar de estado, y posteriormente saber si esta prendido
+     * o apagado el radio
      */
     public void onOff() 
     {
@@ -63,7 +63,7 @@ public class Radio implements iradio
 
     @Override
     /**
-     * matodo que cambia de am a fm y de fm a am
+     * metodo que cambia de am a fm y de fm a am
      * @return estacionAM regresa la ultima estacion am
      * @return estacionFM regresa la ultima estacion fm
      */

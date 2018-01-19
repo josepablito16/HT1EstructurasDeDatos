@@ -22,7 +22,7 @@ public class RadioTest
     {
         iradio x=new Radio();
         
-        float resultado=x.siguiente((float) 87.9);
+        float resultado=x.siguiente((float)0);
         float esperado=(float) 88.1;
         
         assertEquals(esperado,resultado,0.0);

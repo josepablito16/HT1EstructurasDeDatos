@@ -87,24 +87,27 @@ public class Radio implements douglas
     public float siguiente(float a) 
     {
         if (tipo.equals("am")){
-            if (estacionAM!=maxam){
-            estacionAM+=10;
-            return estacionAM;
+            if (a!=maxam){
+            a+=10;
+            estacionAM=a;
+            return a;
             }else{
-            estacionAM=530;
-            return estacionAM;
+            a=530;
+            estacionAM=a;
+            return a;
             }
         }
         else{
-            if (estacionFM<maxfm){
-            estacionFM+=(float)(0.20)*1.0;
+            if (a<maxfm){
+            a+=(float)(0.20)*1.0;
             DecimalFormat numberFormat = new DecimalFormat("#.00");
-            estacionFM=Float.parseFloat(numberFormat.format(estacionFM));
-            return estacionFM;
+            a=Float.parseFloat(numberFormat.format(a));
+            estacionFM=a;
+            return a;
             }else{
-            estacionFM=(float)87.9;
-            
-            return estacionFM;
+            a=(float)87.9;
+            estacionFM=a;
+            return a;
             }
         }
     }
@@ -118,23 +121,27 @@ public class Radio implements douglas
     public float anterior(float a) 
     {
         if (tipo.equals("am")){
-            if (estacionAM!=minam){
-            estacionAM-=10;
-            return estacionAM;
+            if (a!=minam){
+            a-=10;
+            estacionAM=a;
+            return a;
             }else{
-            estacionAM=1610;
-            return estacionAM;
+            a=1610;
+            estacionAM=a;
+            return a;
             }
         }
         else{
-            if (estacionFM>minfm){
-            estacionFM-=0.20*1.0;
+            if (a>minfm){
+            a-=0.20*1.0;
             DecimalFormat numberFormat = new DecimalFormat("#.00");
-            estacionFM=Float.parseFloat(numberFormat.format(estacionFM));
-            return estacionFM;
+            a=Float.parseFloat(numberFormat.format(a));
+            estacionFM=a;
+            return a;
             }else{
-            estacionFM=(float)107.9;
-            return estacionFM;
+            a=(float)107.9;
+            estacionFM=a;
+            return a;
             }
         }
     }
@@ -147,10 +154,10 @@ public class Radio implements douglas
      */
     public void guardar (float e,int b) {
         if (tipo.equals("am")){
-            listaAM[b]=estacionAM;
+            listaAM[b]=e;
         }
         else{
-            listaFM[b]=estacionFM;
+            listaFM[b]=e;
         }
     }
 

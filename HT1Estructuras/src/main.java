@@ -266,7 +266,7 @@ public class main extends javax.swing.JFrame {
                 .addGap(24, 24, 24))
         );
 
-        jButton1.setText("APAGAR");
+        jButton1.setText("Encender");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);

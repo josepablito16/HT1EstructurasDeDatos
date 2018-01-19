@@ -61,6 +61,11 @@ public class main extends javax.swing.JFrame {
         cbConfig = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -357,19 +362,19 @@ public class main extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // boton de siguiente       
         
-            jLabel1.setText(Float.toString(d.siguiente()));
+            jLabel1.setText(Float.toString(d.siguiente(Float.parseFloat(jLabel1.getText()))));
         
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-        
-            jLabel1.setText(Float.toString(d.anterior()));
+        // TODO add your handling code here:        
+            jLabel1.setText(Float.toString(d.anterior(Float.parseFloat(jLabel1.getText()))));
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         if (cbConfig.isSelected()){
             d.guardar(Float.parseFloat(jLabel1.getText()),0);
+            cbConfig.setSelected(false);
         }else{
             float estacion=d.seleccionarFav(0);
             if(estacion!=0){
@@ -382,6 +387,7 @@ public class main extends javax.swing.JFrame {
         // TODO add your handling code here:
         if (cbConfig.isSelected()){
             d.guardar(Float.parseFloat(jLabel1.getText()),1);
+            cbConfig.setSelected(false);
         }else{
             float estacion=d.seleccionarFav(1);
             if(estacion!=0){
@@ -394,6 +400,7 @@ public class main extends javax.swing.JFrame {
         // TODO add your handling code here:
         if (cbConfig.isSelected()){
             d.guardar(Float.parseFloat(jLabel1.getText()),2);
+            cbConfig.setSelected(false);
         }else{
             float estacion=d.seleccionarFav(2);
             if(estacion!=0){
@@ -406,6 +413,7 @@ public class main extends javax.swing.JFrame {
         // TODO add your handling code here:
         if (cbConfig.isSelected()){
             d.guardar(Float.parseFloat(jLabel1.getText()),3);
+            cbConfig.setSelected(false);
         }else{
             float estacion=d.seleccionarFav(3);
             if(estacion!=0){
@@ -418,6 +426,7 @@ public class main extends javax.swing.JFrame {
         // TODO add your handling code here:
         if (cbConfig.isSelected()){
             d.guardar(Float.parseFloat(jLabel1.getText()),4);
+            cbConfig.setSelected(false);
         }else{
             float estacion=d.seleccionarFav(4);
             if(estacion!=0){
@@ -430,6 +439,7 @@ public class main extends javax.swing.JFrame {
         // TODO add your handling code here:
         if (cbConfig.isSelected()){
             d.guardar(Float.parseFloat(jLabel1.getText()),5);
+            cbConfig.setSelected(false);
         }else{
             float estacion=d.seleccionarFav(5);
             if(estacion!=0){
@@ -442,6 +452,7 @@ public class main extends javax.swing.JFrame {
         // TODO add your handling code here:
         if (cbConfig.isSelected()){
             d.guardar(Float.parseFloat(jLabel1.getText()),6);
+            cbConfig.setSelected(false);
         }else{
             float estacion=d.seleccionarFav(6);
             if(estacion!=0){
@@ -454,6 +465,7 @@ public class main extends javax.swing.JFrame {
         // TODO add your handling code here:
         if (cbConfig.isSelected()){
             d.guardar(Float.parseFloat(jLabel1.getText()),7);
+            cbConfig.setSelected(false);
         }else{
             float estacion=d.seleccionarFav(7);
             if(estacion!=0){
@@ -466,6 +478,7 @@ public class main extends javax.swing.JFrame {
         // TODO add your handling code here:
         if (cbConfig.isSelected()){
             d.guardar(Float.parseFloat(jLabel1.getText()),8);
+            cbConfig.setSelected(false);
         }else{
             float estacion=d.seleccionarFav(8);
             if(estacion!=0){
@@ -478,6 +491,7 @@ public class main extends javax.swing.JFrame {
         // TODO add your handling code here:
         if (cbConfig.isSelected()){
             d.guardar(Float.parseFloat(jLabel1.getText()),9);
+            cbConfig.setSelected(false);
         }else{
             float estacion=d.seleccionarFav(9);
             if(estacion!=0){
@@ -490,6 +504,7 @@ public class main extends javax.swing.JFrame {
         // TODO add your handling code here:
         if (cbConfig.isSelected()){
             d.guardar(Float.parseFloat(jLabel1.getText()),10);
+            cbConfig.setSelected(false);
         }else{
             float estacion=d.seleccionarFav(10);
             if(estacion!=0){
@@ -502,6 +517,7 @@ public class main extends javax.swing.JFrame {
         // TODO add your handling code here:
         if (cbConfig.isSelected()){
             d.guardar(Float.parseFloat(jLabel1.getText()),11);
+            cbConfig.setSelected(false);
         }else{
             float estacion=d.seleccionarFav(11);
             if(estacion!=0){
@@ -509,6 +525,12 @@ public class main extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_jButton17ActionPerformed
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        // cuando la pantalla inicializa
+        
+        jPanel1.setVisible(false);
+    }//GEN-LAST:event_formWindowOpened
 
     /**
      * @param args the command line arguments

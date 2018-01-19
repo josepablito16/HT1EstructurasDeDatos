@@ -1,4 +1,3 @@
-
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
@@ -30,10 +29,10 @@ public class Radio implements douglas
     public Radio(){
         tipo="fm";
         maxfm=(float)(107.9);
-        minfm=(float)(89.7);
+        minfm=(float)(87.9);
         maxam=(float)(1610);
         minam=(float)(530);
-        encendido=true;
+        encendido=false;
         estacionAM= 530;
         estacionFM= (float)87.9;
         listaAM=new float[12];
@@ -85,7 +84,7 @@ public class Radio implements douglas
      * @return estacionAm regresa la estacion que corresponda
      * @return estacionFm regresa la estacion que corresponda
      */
-    public float siguiente() 
+    public float siguiente(float a) 
     {
         if (tipo.equals("am")){
             if (estacionAM!=maxam){
@@ -116,7 +115,7 @@ public class Radio implements douglas
      * @return estacion Am regresa la estacion anterior
      * @return estacion fm regresa la estacion anterior     
      */
-    public float anterior() 
+    public float anterior(float a) 
     {
         if (tipo.equals("am")){
             if (estacionAM!=minam){

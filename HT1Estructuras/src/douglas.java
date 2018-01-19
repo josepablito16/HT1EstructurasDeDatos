@@ -28,14 +28,14 @@ public interface douglas
      * @return estacionAm regresa la estacion que corresponda
      * @return estacionFm regresa la estacion que corresponda
      */
-    public float siguiente();
+    public float siguiente(float a);
     
     /**
      * metodo que regresa la estacion anterior dependiendo se es am o fm
      * @return estacion Am regresa la estacion anterior
      * @return estacion fm regresa la estacion anterior     
      */
-    public float anterior();
+    public float anterior(float a);
     
     /**
      * metodo para guardar una estacion en favoritos

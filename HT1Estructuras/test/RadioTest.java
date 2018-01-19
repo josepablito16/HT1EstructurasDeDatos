@@ -20,7 +20,7 @@ public class RadioTest
     @org.junit.Test
     public void testSiguiente()
     {
-        douglas x=new Radio();
+        iradio x=new Radio();
         
         float resultado=x.siguiente((float) 87.9);
         float esperado=(float) 88.1;
@@ -32,7 +32,7 @@ public class RadioTest
     @org.junit.Test
     public void testAnterior()
     {
-        douglas x=new Radio();
+        iradio x=new Radio();
         
         float resultado=x.anterior((float) 87.9);
         float esperado=(float) 107.9;
@@ -44,7 +44,7 @@ public class RadioTest
     @org.junit.Test
     public void testGuardarYseleccionarFav()
     {
-        douglas x=new Radio();
+        iradio x=new Radio();
         
         x.guardar((float) 87.9,2);
         float resultado=x.seleccionarFav(2);

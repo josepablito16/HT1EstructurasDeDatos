@@ -22,7 +22,7 @@ public class main extends javax.swing.JFrame {
     /**
      * Creates new form main
      */
-    private douglas d;
+    private iradio d;
     
     public main() {
         d = new Radio();

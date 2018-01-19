@@ -8,7 +8,7 @@ import java.text.DecimalFormat;
  * @version 18.01.2018
  * 
  */
-public class Radio implements douglas
+public class Radio implements iradio
 {
     private boolean encendido;
     private String tipo;

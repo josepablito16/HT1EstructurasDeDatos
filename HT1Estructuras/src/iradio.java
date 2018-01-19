@@ -1,4 +1,3 @@
-
 /**
  *
  * @author Luis Delgado
@@ -7,9 +6,8 @@
  * 
  */
 
-public interface douglas 
+public interface iradio 
 {
-    
     /**
      * Metodo para saber si el radio esta encendido o apagado
      * @return encendido regresa si esta encendido o apagado el radio 
@@ -51,5 +49,6 @@ public interface douglas
      */
     public float seleccionarFav(int b);
    
+    
     
 }
